@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { WashingMachine } from 'lucide-react';
 import LaundryForm from './components/LaundryForm';
 import Dashboard from './components/Dashboard';
@@ -68,7 +68,7 @@ export default function App() {
                 </p>
               </div>
               <LaundryForm initialData={record} onSave={handleSave} />
-              
+
               {record && (
                 <div className="mt-6 text-center">
                   <button
@@ -88,10 +88,10 @@ export default function App() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <Dashboard 
-                record={record!} 
-                onEdit={() => setIsEditing(true)} 
-                onReset={handleReset} 
+                <Dashboard
+                  record={record!}
+                  onEdit={() => setIsEditing(true)}
+                  onReset={handleReset}
               />
             </motion.div>
           )}
