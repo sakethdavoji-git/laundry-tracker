@@ -9,8 +9,6 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
-    ,
-    "postinstall": "npm install vite@^6.4.2"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
